@@ -1,0 +1,22 @@
+/* Setting variables / base appearance styles*/
+
+/* Colours */
+
+:root {
+	--lightest: #e1d8fd;
+	--medium: #8d7cbf;
+	--dark: #3c027d;
+	--contrast: #d84e84;
+	--textdark: #000000;
+	--textlight: #ffffff;
+}
+
+/* Base styles */
+
+body {
+	background-color: var(--lightest);
+	color: var(--textdark);
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+}

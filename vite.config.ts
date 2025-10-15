@@ -1,8 +1,10 @@
+import devtoolsJson from 'vite-plugin-devtools-json';
 import { defineConfig } from 'vitest/config';
 import { sveltekit } from '@sveltejs/kit/vite';
+import mkcert from 'vite-plugin-mkcert';
 
 export default defineConfig({
-	plugins: [sveltekit()],
+	plugins: [sveltekit(), mkcert(), devtoolsJson()],
 	test: {
 		expect: { requireAssertions: true },
 		projects: [

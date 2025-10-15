@@ -23,8 +23,11 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Uses static page adapter - [`adapter-static](https://svelte.dev/docs/kit/adapter-static)
 
 # Credits / Thanks
 
-Uses svelte: Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Libraries / Tools Used
+
+Svelte: Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Modern Reset CSS - (there's an argument against using a reset, but it seems minimal enough): [`modern-normalize`] (https://github.com/sindresorhus/modern-normalize/tree/main)
