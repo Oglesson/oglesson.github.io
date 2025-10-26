@@ -1,6 +1,6 @@
 # oglesson.github.io
 
-main pages/content for oglesson.com
+main pages/content for oglesson.com. Development stage brainstorming/planning at Trello: https://trello.com/b/Wb6fhMFR/main-site
 
 ## Developing
 
