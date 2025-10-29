@@ -1,4 +1,8 @@
-<nav>
+<script>
+	let open = $state(false);
+</script>
+
+<nav class={open ? 'open' : ''}>
 	<ul>
 		<li><a href="#about">Home</a></li>
 		<li>
@@ -10,6 +14,9 @@
 		</li>
 	</ul>
 </nav>
+<button onclick={() => (open = !open)}>
+	{open ? 'Close Menu' : 'Open Menu'}
+</button> // this needs styling
 
 <style>
 	nav {
