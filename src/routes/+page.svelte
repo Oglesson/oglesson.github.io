@@ -1,14 +1,17 @@
 <script>
-	import Mainnav from '$lib/mainnav.svelte';
+	import SiteHeader from '$lib/siteheader.svelte';
+	import Hero from '$lib/hero.svelte';
+	import Projects from '$lib/projects.svelte';
+	import Footer from '$lib/footer.svelte';
+	import Skills from '$lib/skills.svelte';
 </script>
 
-<header>
-	<h1>Oglesson.com</h1>
-
-	<Mainnav />
-</header>
+<SiteHeader />
 <main>
-	<div id="about">
+	<Hero />
+	<Skills />
+	<Projects />
+	<!--<section id="about">
 		<p>Bare with me whilst I pick up svelte and re do some things between life and work.</p>
 		<p>
 			<a href="http://oglesson.bsky.social" aria-label="Bluesky"><span>Bluesky</span></a>,
@@ -18,14 +21,16 @@
 			and
 			<a href="http://github.com/sophie-oglesson" aria-label="GitHub"><span>github</span></a>
 		</p>
-	</div>
-	<div id="work">
+	</section>
+	<section id="work">
 		<p>Work samples.</p>
-	</div>
+	</section>-->
 </main>
 
+<Footer />
+
 <style>
-	header,
+	/*header,
 	main {
 		padding: 1rem;
 	}
@@ -37,5 +42,5 @@
 
 	main {
 		height: stretch;
-	}
+	}*/
 </style>
