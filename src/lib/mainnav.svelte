@@ -1,4 +1,8 @@
-<nav>
+<script>
+	let open = $state(false);
+</script>
+
+<nav class={open ? 'open' : ''}>
 	<ul>
 		<li><a href="#about">Home</a></li>
 		<li>
@@ -10,6 +14,11 @@
 		</li>
 	</ul>
 </nav>
+<button onclick={() => (open = !open)}>
+	{open ? 'Close Menu' : 'Open Menu'}
+</button>
+
+<!-- this needs styling -->
 
 <style>
 	nav {
@@ -33,6 +42,12 @@
 		color: var(--light);
 		text-decoration: none;
 		padding: 0.5rem;
+	}
+	button {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		z-index: 11;
 	}
 
 	@media (min-width: 600px) {

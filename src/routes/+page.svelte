@@ -19,7 +19,7 @@
 			<a href="http://github.com/sophie-oglesson" aria-label="GitHub"><span>github</span></a>
 		</p>
 	</div>
-	<div id="work-samples">
+	<div id="work">
 		<p>Work samples.</p>
 	</div>
 </main>
