@@ -10,12 +10,12 @@
 <style>
 	.skills {
 		background: var(--medium);
-		color: #fff;
+		color: var(--textlight);
 		padding: 2rem;
 	}
 	.skill-chip {
 		background: var(--accent);
-		color: #fff;
+		color: var(--textlight);
 		padding: 0.5rem 1rem;
 		margin: 0.25rem;
 		border-radius: 20px;

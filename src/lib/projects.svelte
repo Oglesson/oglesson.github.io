@@ -19,17 +19,17 @@
 
 <style>
 	section#projects {
-		background: #fff;
-		color: #3c027d;
+		background: var(--textlight);
+		color: var(--dark);
 		padding: 3rem 2rem;
 	}
 	.project-card {
-		border: 2px solid #8d7cbf;
+		border: 2px solid var(--medium);
 		padding: 1rem;
 		transition: 0.3s;
 	}
 	.project-card:hover {
-		background: #8d7cbf;
-		color: #fff;
+		background: var(--medium);
+		color: var(--textlight);
 	}
 </style>

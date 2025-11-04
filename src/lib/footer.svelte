@@ -7,7 +7,7 @@
 <style>
 	footer {
 		background: #3c027d;
-		color: #fff;
+		color: var(--textlight);
 		text-align: center;
 		padding: 1rem;
 		align-self: stretch;

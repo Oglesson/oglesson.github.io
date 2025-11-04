@@ -28,8 +28,8 @@
 
 <style>
 	header {
-		background: #3c027d;
-		color: #fff;
+		background: var(--dark);
+		color: var(--textlight);
 		padding: 1rem;
 		display: flex;
 		justify-content: space-between;
@@ -52,7 +52,7 @@
 	}
 
 	nav a {
-		color: #fff;
+		color: var(--textlight);
 		margin-left: 2rem;
 		text-decoration: none;
 		transition: color 0.3s;
