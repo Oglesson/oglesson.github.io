@@ -8,10 +8,13 @@
 </section>
 
 <style>
+	h3 {
+		margin-top: 0;
+	}
 	.skills {
 		background: var(--medium);
 		color: var(--textlight);
-		padding: 2rem;
+		padding: 1.5rem 2rem;
 	}
 	.skill-chip {
 		background: var(--accent);

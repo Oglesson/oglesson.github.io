@@ -21,12 +21,13 @@
 	section#projects {
 		background: var(--textlight);
 		color: var(--dark);
-		padding: 3rem 2rem;
+		padding: 1.5rem 2rem;
 	}
 	.project-card {
 		border: 2px solid var(--medium);
 		padding: 1rem;
 		transition: 0.3s;
+		margin-bottom: 1rem;
 	}
 	.project-card:hover {
 		background: var(--medium);
