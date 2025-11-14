@@ -8,9 +8,6 @@
 </section>
 
 <style>
-	h3 {
-		margin-top: 0;
-	}
 	.skills {
 		background: var(--medium);
 		color: var(--textlight);
