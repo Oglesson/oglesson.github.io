@@ -19,22 +19,35 @@
 	</section>
 	<ul>
 		<li>
-			<a href="http://oglesson.bsky.social" aria-label="Bluesky"
-				><span data-icon="bluesky">Bluesky</span></a
+			<a
+				href="http://oglesson.bsky.social"
+				aria-label="Bluesky"
+				target="_blank"
+				rel="noopener external"><span data-icon="bluesky">Bluesky</span></a
 			>
 		</li>
 		<li>
-			<a href="http://www.linkedin.com/in/sophie-oglesson" aria-label="LinkedIn"
-				><span data-icon="linkedin">LinkedIn</span></a
+			<a
+				href="http://www.linkedin.com/in/sophie-oglesson"
+				aria-label="LinkedIn"
+				target="_blank"
+				rel="noopener external"><span data-icon="linkedin">LinkedIn</span></a
 			>
 		</li>
 		<li>
-			<a href="http://github.com/Oglesson" aria-label="GitHub"
-				><span data-icon="github">github</span></a
+			<a
+				href="http://github.com/Oglesson"
+				aria-label="GitHub"
+				target="_blank"
+				rel="noopener external"><span data-icon="github">github</span></a
 			>
 		</li>
 		<li>
-			<a href="mailto:sophie@oglesson.com" aria-label="Email"
+			<a
+				href="mailto:sophie@oglesson.com"
+				aria-label="Email"
+				target="_blank"
+				rel="noopener external"
 				><span data-icon="email">Email me. sophie@oglesson.com</span></a
 			>
 		</li>
@@ -55,6 +68,7 @@
 		display: flex;
 		justify-content: center;
 		gap: 1rem;
+		overflow: hidden;
 	}
 
 	.hero a {
