@@ -10,7 +10,7 @@
 			<li><a href="/#aboutme" onclick={() => (open = !open)}>About</a></li>
 			<li><a href="/#skills" onclick={() => (open = !open)}>Skills</a></li>
 			<li>
-				<a href="/proseccon" onclick={() => (open = !open)}>Projects</a>
+				<a href="/prosecco" onclick={() => (open = !open)}>Projects</a>
 				<ul>
 					<li><a href="/prosecco" onclick={() => (open = !open)}>Prosecco</a></li>
 					<li><a href="/chronology" onclick={() => (open = !open)}>Chronology</a></li>
