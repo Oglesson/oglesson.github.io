@@ -4,16 +4,16 @@
 
 <header id="top">
 	<h1>Sophie Oglesson</h1>
-	<nav class={open ? 'open' : ''}>
+	<nav class="nav-open {open ? 'open' : ''}">
 		<ul>
-			<li><a href="/#top">Home</a></li>
-			<li><a href="/#aboutme">About</a></li>
-			<li><a href="/#skills">Skills</a></li>
+			<li><a href="/#top" onclick={() => (open = !open)}>Home</a></li>
+			<li><a href="/#aboutme" onclick={() => (open = !open)}>About</a></li>
+			<li><a href="/#skills" onclick={() => (open = !open)}>Skills</a></li>
 			<li>
-				<a href="/#projects">Projects</a>
+				<a href="/proseccon" onclick={() => (open = !open)}>Projects</a>
 				<ul>
-					<li><a href="/prosecco">Prosecco</a></li>
-					<li><a href="/chronology">Chronology</a></li>
+					<li><a href="/prosecco" onclick={() => (open = !open)}>Prosecco</a></li>
+					<li><a href="/chronology" onclick={() => (open = !open)}>Chronology</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -22,6 +22,7 @@
 		id="toggle-navigation-btn"
 		aria-label="Toggle Navigation"
 		onclick={() => (open = !open)}
+		class={open ? 'menu-open' : ''}
 	>
 		{open ? 'Close Menu' : 'Open Menu'}
 	</button>
@@ -50,13 +51,21 @@
 	nav.open {
 		height: 100%;
 		width: 100%;
-		position: relative;
+		position: absolute;
 		top: 0;
 		left: 0;
 		z-index: 10;
+		opacity: 0.8;
+		background-color: var(--dark);
 	}
 	nav.open ul {
 		margin-block-end: 0;
+		font-size: 2rem;
+		background: var(--dark);
+	}
+
+	nav.open ul ul {
+		margin-left: 1.5rem;
 	}
 
 	nav a {
@@ -77,7 +86,6 @@
 		background-color: var(--lightest);
 		border-radius: 10rem;
 		border: none;
-
 		padding: 0;
 		color: transparent;
 		display: inline-block;
@@ -93,6 +101,36 @@
 		-webkit-mask-size: 100% 100%;
 		mask-size: 100% 100%;
 	}
+
+	button.menu-open {
+		--svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z'/%3E%3C/svg%3E");
+		background-color: var(--textlight);
+		-webkit-mask-image: var(--svg);
+		mask-image: var(--svg);
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		-webkit-mask-size: 100% 100%;
+		mask-size: 100% 100%;
+	}
+
+	/*@keyframes navOpen {
+		0% {
+			opacity: 0;
+			height: 0;
+			width: 0;
+		}
+		100% {
+			opacity: 0.8;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	@media (max-width: 600px) {
+		.nav-open {
+			animation-duration: 2s;
+			animation-name: navOpen;
+		}
+	}*/
 
 	@media (min-width: 600px) {
 		header {
@@ -117,6 +155,10 @@
 			margin-block-end: 0;
 			display: flex;
 			flex-direction: column;
+		}
+
+		nav.open {
+			opacity: 1;
 		}
 
 		button {
