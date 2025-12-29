@@ -6,11 +6,11 @@
 	<h1>Sophie Oglesson</h1>
 	<nav class={open ? 'open' : ''}>
 		<ul>
-			<li><a href="#top">Home</a></li>
-			<li><a href="#aboutme">About</a></li>
-			<li><a href="#skills">Skills</a></li>
+			<li><a href="/#top">Home</a></li>
+			<li><a href="/#aboutme">About</a></li>
+			<li><a href="/#skills">Skills</a></li>
 			<li>
-				<a href="#projects">Projects</a>
+				<a href="/#projects">Projects</a>
 				<ul>
 					<li><a href="/prosecco">Prosecco</a></li>
 					<li><a href="/chronology">Chronology</a></li>
@@ -54,6 +54,9 @@
 		top: 0;
 		left: 0;
 		z-index: 10;
+	}
+	nav.open ul {
+		margin-block-end: 0;
 	}
 
 	nav a {

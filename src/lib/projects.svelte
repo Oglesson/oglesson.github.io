@@ -1,4 +1,4 @@
-<section id="projects">
+<section id="projects" class="loadIn">
 	<h3>Projects</h3>
 	<p>
 		Mixture of personal and professional projects. Some details may be limited and/or altered to
