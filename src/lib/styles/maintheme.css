@@ -6,7 +6,7 @@
 	--lightest: #e1d8fd;
 	--medium: #8d7cbf;
 	--dark: #3c027d;
-	--accent: #d84e84;
+	--accent: #a63060;
 	--textdark: #000000;
 	--textlight: #ffffff;
 }
@@ -67,27 +67,10 @@ main {
 	flex: auto;
 }
 
-@keyframes fadeInL {
-	0% {
-		opacity: 0;
-		transform: translate3d(-100%, 0, 0);
-	}
-	100% {
-		opacity: 1;
-		transform: none;
-	}
-}
-@media (max-width: 600px) {
-	.loadIn {
-		animation-duration: 1.25s;
-		animation-name: fadeInL;
-	}
-}
 
 @media (min-width: 600px) {
 	main,
 	nav {
-		width: 80vw;
 		margin: auto;
 	}
 }

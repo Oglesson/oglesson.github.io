@@ -1,10 +1,14 @@
+<script>
+	import { resolve } from '$app/paths';
+</script>
+
 <section id="projects" class="loadIn">
 	<h3>Projects</h3>
 	<p>
 		Mixture of personal and professional projects. Some details may be limited and/or altered to
 		retain confidentiality.
 	</p>
-	<a href="/chronology">
+	<a href={resolve('/chronology')}>
 		<div class="project-card">
 			<h4>Chronology</h4>
 			<p>
@@ -13,7 +17,7 @@
 			</p>
 		</div>
 	</a>
-	<a href="/prosecco">
+	<a href={resolve('/prosecco')}>
 		<div class="project-card">
 			<h4>Prosecco</h4>
 			<p>Professional front-end web build for a budget broadband brand.</p>
@@ -27,6 +31,10 @@
 		color: var(--dark);
 		padding: 1.5rem 2rem;
 	}
+	h3 {
+		font-size: 1.5rem;
+	}
+
 	.project-card {
 		border: 2px solid var(--medium);
 		padding: 1rem;

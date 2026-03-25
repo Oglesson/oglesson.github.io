@@ -1,19 +1,25 @@
 <script>
+	import { resolve } from '$app/paths';
 	let open = $state(false);
+	let projectsOpen = $state(false);
 </script>
 
 <header id="top">
-	<h1>Sophie Oglesson</h1>
+	<h1><a href="/">Oglesson.com</a></h1>
 	<nav class="nav-open {open ? 'open' : ''}">
 		<ul>
-			<li><a href="/#top" onclick={() => (open = !open)}>Home</a></li>
-			<li><a href="/#aboutme" onclick={() => (open = !open)}>About</a></li>
-			<li><a href="/#skills" onclick={() => (open = !open)}>Skills</a></li>
-			<li>
-				<a href="/prosecco" onclick={() => (open = !open)}>Projects</a>
-				<ul>
-					<li><a href="/prosecco" onclick={() => (open = !open)}>Prosecco</a></li>
-					<li><a href="/chronology" onclick={() => (open = !open)}>Chronology</a></li>
+			<li><a href={resolve('/#aboutme')} onclick={() => (open = !open)}>About</a></li>
+			<li><a href={resolve('/#skills')} onclick={() => (open = !open)}>Skills</a></li>
+			<li class="projects-item {projectsOpen ? 'projects-open' : ''}">
+				<a href={resolve('/prosecco')} onclick={() => { open = !open; projectsOpen = false; }}>Projects</a>
+				<button class="projects-toggle" onclick={(e) => { e.preventDefault(); projectsOpen = !projectsOpen; }} aria-label="Toggle Projects Menu">▾</button>
+				<ul class="projects-submenu">
+					<li>
+						<a href={resolve('/prosecco')} onclick={() => { open = !open; projectsOpen = false; }}>Prosecco</a>
+					</li>
+					<li>
+						<a href={resolve('/chronology')} onclick={() => { open = !open; projectsOpen = false; }}>Chronology</a>
+					</li>
 				</ul>
 			</li>
 		</ul>
@@ -30,8 +36,9 @@
 
 <style>
 	header {
-		background: var(--dark);
-		color: var(--textlight);
+		background: var(--textlight);
+		color: var(--dark);
+		border-bottom: 1px solid var(--dark);
 		padding: 1rem;
 		display: flex;
 		justify-content: space-between;
@@ -62,6 +69,11 @@
 		margin-block-end: 0;
 		font-size: 2rem;
 		background: var(--dark);
+		color: var(--textlight);
+	}
+
+	nav.open a {
+		color: var(--textlight);
 	}
 
 	nav.open ul ul {
@@ -69,10 +81,11 @@
 	}
 
 	nav a {
-		color: var(--textlight);
-		margin-left: 2rem;
+		color: var(--dark);
+		margin-left: 3rem;
 		text-decoration: none;
 		transition: color 0.3s;
+		font-weight: 600;
 	}
 	nav a:hover {
 		color: var(--accent);
@@ -93,7 +106,7 @@
 		width: 2.3rem;
 		overflow: hidden;
 		--svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m1 5a1 1 0 1 0 0 2h14a1 1 0 1 0 0-2z'/%3E%3C/svg%3E");
-		background-color: var(--textlight);
+		background-color: var(--dark);
 		-webkit-mask-image: var(--svg);
 		mask-image: var(--svg);
 		-webkit-mask-repeat: no-repeat;
@@ -104,7 +117,7 @@
 
 	button.menu-open {
 		--svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z'/%3E%3C/svg%3E");
-		background-color: var(--textlight);
+		background-color: var(--dark);
 		-webkit-mask-image: var(--svg);
 		mask-image: var(--svg);
 		-webkit-mask-repeat: no-repeat;
@@ -113,28 +126,9 @@
 		mask-size: 100% 100%;
 	}
 
-	/*@keyframes navOpen {
-		0% {
-			opacity: 0;
-			height: 0;
-			width: 0;
-		}
-		100% {
-			opacity: 0.8;
-			height: 100%;
-			width: 100%;
-		}
-	}
-	@media (max-width: 600px) {
-		.nav-open {
-			animation-duration: 2s;
-			animation-name: navOpen;
-		}
-	}*/
-
 	@media (min-width: 600px) {
 		header {
-			padding: 2rem;
+			padding: 1rem;
 		}
 		h1 {
 			flex-grow: 1;
@@ -148,17 +142,61 @@
 			margin-block-start: 0;
 			margin-block-end: 0;
 			display: flex;
+			justify-content: flex-end;
 		}
 
 		nav ul ul {
 			margin-block-start: 0;
 			margin-block-end: 0;
-			display: flex;
+			display: none;
 			flex-direction: column;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			background: var(--textlight);
+			border: 1px solid var(--dark);
+			min-width: 10rem;
+			z-index: 20;
+		}
+
+		.projects-item {
+			position: relative;
+		}
+
+		.projects-item.projects-open .projects-submenu {
+			display: flex;
+		}
+
+		.projects-toggle {
+			display: inline;
+			background: none;
+			border: none;
+			cursor: pointer;
+			color: var(--dark);
+			font-size: 1rem;
+			padding: 0 0.25rem;
+		}
+
+		.projects-submenu a {
+			margin-left: 0;
+			padding: 0.5rem 1rem;
+			display: block;
 		}
 
 		nav.open {
+			height: initial;
+			width: auto;
+			position: static;
+			top: auto;
+			left: auto;
+			z-index: auto;
 			opacity: 1;
+			background-color: transparent;
+		}
+
+		nav.open ul {
+			font-size: inherit;
+			background: transparent;
 		}
 
 		button {

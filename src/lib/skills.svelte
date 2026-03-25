@@ -1,5 +1,5 @@
 <section class="skills loadIn" id="skills">
-	<h3>Skills</h3>
+	<h3>Main Skills</h3>
 
 	<details class="skill-chip">
 		<summary>Agile / SCRUM</summary>
@@ -38,9 +38,15 @@
 
 <style>
 	.skills {
-		background: var(--medium);
-		color: var(--textlight);
+		background: var(--textlight);
+		color: var(--textdark);
 		padding: 1.5rem 2rem;
+		border-bottom: 1px solid var(--dark);
+	}
+
+	.skills h3 {
+		color: var(--dark);
+		font-size: 1.5rem;
 	}
 	.skill-chip {
 		background: var(--accent);
@@ -51,14 +57,16 @@
 		display: inline-block;
 		transition: all 0.2s ease-in;
 	}
-	.skill-chip:hover {
+	.skill-chip:not([open]):hover {
 		background: var(--dark);
-	}
-	.skill-chip[open] summary {
-		margin-bottom: 0.5rem;
 	}
 
 	.skill-chip[open] {
+		background: var(--dark);
 		padding: 1rem;
+	}
+
+	.skill-chip[open] summary {
+		margin-bottom: 0.5rem;
 	}
 </style>

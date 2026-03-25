@@ -1,22 +1,20 @@
-<script>
-	let open = $state(false);
-</script>
-
 <section class="hero">
-	<h2>Hi, I'm <strong>Sophie Oglesson</strong></h2>
-	<p>Product Developer | Strategist | Problem Solver</p>
-	<section id="aboutme">
-		<p>
-			With twentyish years experience in web development and digital planning across a
-			spectrum of industries, I love to fix the broken and tweak the new for a happier user
-			experience.
-		</p>
-		<p>
-			And when I'm not doing that, I can be found on a Ski Erg, under a barbell or in a
-			field/forest pretending to be someone else.
-		</p>
-		<p>You can ask me about that with the following:</p>
-	</section>
+	<div class="hero-text">
+		<h2>Hi, I'm <strong>Sophie Oglesson</strong></h2>
+		<h3>Product Developer | Strategist | Problem Solver</h3>
+		<section id="aboutme">
+			<p>
+				With twentyish years experience in web development and digital planning across a
+				spectrum of industries, I love to fix the broken and tweak the new for a happier
+				user experience.
+			</p>
+			<p>
+				And when I'm not doing that, I can be found on a Ski Erg, under a barbell or in a
+				field/forest pretending to be someone else.
+			</p>
+			<p>You can ask me about that with the following:</p>
+		</section>
+	</div>
 	<ul>
 		<li>
 			<a
@@ -61,6 +59,10 @@
 		padding: 4rem 2rem;
 		text-align: center;
 	}
+
+	.hero p {
+		margin-top: 0;
+	}
 	ul {
 		list-style: none;
 		padding: 0;
@@ -73,6 +75,10 @@
 
 	.hero a {
 		color: transparent;
+	}
+
+	.hero a:hover span {
+		background-color: var(--dark);
 	}
 
 	.hero span {
@@ -112,6 +118,26 @@
 	@media (min-width: 600px) {
 		#aboutme {
 			height: initial;
+		}
+
+		.hero {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+			text-align: left;
+			gap: 2rem;
+		}
+
+		.hero-text {
+			flex: 0 0 66%;
+		}
+
+		ul {
+			flex-shrink: 0;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 		}
 	}
 </style>
