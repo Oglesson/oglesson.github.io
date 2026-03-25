@@ -11,7 +11,7 @@
 			<li><a href={resolve('/#aboutme')} onclick={() => (open = !open)}>About</a></li>
 			<li><a href={resolve('/#skills')} onclick={() => (open = !open)}>Skills</a></li>
 			<li class="projects-item {projectsOpen ? 'projects-open' : ''}">
-				<a href={resolve('/prosecco')} onclick={() => { open = !open; projectsOpen = false; }}>Projects</a>
+				<a href={resolve('/prosecco')} onclick={(e) => { if (window.innerWidth >= 600) { e.preventDefault(); projectsOpen = !projectsOpen; } else { open = !open; projectsOpen = false; } }}>Projects</a>
 				<button class="projects-toggle" onclick={(e) => { e.preventDefault(); projectsOpen = !projectsOpen; }} aria-label="Toggle Projects Menu">▾</button>
 				<ul class="projects-submenu">
 					<li>
@@ -62,7 +62,7 @@
 		top: 0;
 		left: 0;
 		z-index: 10;
-		opacity: 0.8;
+		opacity: 0.95;
 		background-color: var(--dark);
 	}
 	nav.open ul {
@@ -117,7 +117,7 @@
 
 	button.menu-open {
 		--svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275t-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275t.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7t-.7.275t-.7-.275z'/%3E%3C/svg%3E");
-		background-color: var(--dark);
+		background-color: white;
 		-webkit-mask-image: var(--svg);
 		mask-image: var(--svg);
 		-webkit-mask-repeat: no-repeat;
@@ -136,6 +136,7 @@
 
 		nav {
 			height: initial;
+			overflow: visible;
 		}
 
 		nav ul {
@@ -168,13 +169,24 @@
 		}
 
 		.projects-toggle {
-			display: inline;
-			background: none;
-			border: none;
-			cursor: pointer;
-			color: var(--dark);
-			font-size: 1rem;
-			padding: 0 0.25rem;
+			display: none;
+		}
+
+		.projects-item > a::after {
+			content: '';
+			display: inline-block;
+			width: 0;
+			height: 0;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;
+			border-left: 5px solid currentColor;
+			margin-left: 0.4rem;
+			vertical-align: middle;
+			transition: transform 0.2s;
+		}
+
+		.projects-item.projects-open > a::after {
+			transform: rotate(90deg);
 		}
 
 		.projects-submenu a {

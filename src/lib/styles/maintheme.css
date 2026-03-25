@@ -66,11 +66,3 @@ main {
 	background: #fff;
 	flex: auto;
 }
-
-
-@media (min-width: 600px) {
-	main,
-	nav {
-		margin: auto;
-	}
-}

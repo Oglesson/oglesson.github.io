@@ -31,3 +31,8 @@ Uses static page adapter - [`adapter-static](https://svelte.dev/docs/kit/adapter
 
 Svelte: Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 Modern Reset CSS - (there's an argument against using a reset, but it seems minimal enough): [`modern-normalize`] (https://github.com/sindresorhus/modern-normalize/tree/main)
+
+# General To-dos
+
+Specific todos are attached to components. Need to look at the tests again and add them to gitactions (probably)
+Check types - do better typing

@@ -12,7 +12,6 @@
 				And when I'm not doing that, I can be found on a Ski Erg, under a barbell or in a
 				field/forest pretending to be someone else.
 			</p>
-			<p>You can ask me about that with the following:</p>
 		</section>
 	</div>
 	<ul>
@@ -127,6 +126,8 @@
 			justify-content: space-between;
 			text-align: left;
 			gap: 2rem;
+			padding-top: 1rem;
+			padding-bottom: 1rem;
 		}
 
 		.hero-text {
