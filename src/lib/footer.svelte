@@ -1,7 +1,7 @@
 <!-- Not sure if this is atually needed but there you go-->
 
 <footer>
-	<a href="mailto:sophie@oglesson.com">Contact Me</a> | © 2025 Sophie Oglesson
+	<a href="mailto:sophie@oglesson.com">Contact Me</a> | © 2026 Sophie Oglesson
 </footer>
 
 <style>
