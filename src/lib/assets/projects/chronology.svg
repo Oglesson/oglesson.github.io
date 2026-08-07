@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Placeholder screenshot of the Chronology app">
+	<rect width="1200" height="900" fill="#e1d8fd" />
+	<rect x="0" y="0" width="1200" height="90" fill="#3c027d" />
+	<circle cx="55" cy="45" r="16" fill="#e1d8fd" />
+	<rect x="90" y="36" width="220" height="18" rx="9" fill="#8d7cbf" />
+	<rect x="60" y="150" width="1080" height="620" rx="16" fill="#ffffff" />
+	<rect x="100" y="190" width="260" height="22" rx="11" fill="#3c027d" />
+	<!-- timeline axis -->
+	<line x1="120" y1="260" x2="1100" y2="260" stroke="#8d7cbf" stroke-width="2" />
+	<line x1="120" y1="260" x2="120" y2="720" stroke="#8d7cbf" stroke-width="2" />
+	<!-- gantt bars -->
+	<rect x="150" y="300" width="380" height="40" rx="8" fill="#8d7cbf" />
+	<rect x="420" y="360" width="500" height="40" rx="8" fill="#a63060" />
+	<rect x="200" y="420" width="300" height="40" rx="8" fill="#3c027d" />
+	<rect x="480" y="480" width="420" height="40" rx="8" fill="#8d7cbf" />
+	<rect x="150" y="540" width="620" height="40" rx="8" fill="#a63060" />
+	<rect x="640" y="600" width="360" height="40" rx="8" fill="#3c027d" />
+	<rect x="300" y="660" width="260" height="40" rx="8" fill="#8d7cbf" />
+	<!-- tick marks -->
+	<g fill="#8d7cbf">
+		<rect x="270" y="250" width="4" height="20" />
+		<rect x="470" y="250" width="4" height="20" />
+		<rect x="670" y="250" width="4" height="20" />
+		<rect x="870" y="250" width="4" height="20" />
+	</g>
+</svg>

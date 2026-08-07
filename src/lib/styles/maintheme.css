@@ -1,0 +1,72 @@
+/* Setting variables / base appearance styles*/
+
+/* Colours */
+
+:root {
+	/* colours*/
+	--background: #ffffff;
+	--lightest: #e1d8fd;
+	--medium: #8d7cbf;
+	--dark: #3c027d;
+	--accent: #a63060;
+	--textdark: #000000;
+	--textlight: #ffffff;
+	/* dimensions*/
+	--screen-body-width: calc(100vw - 30vw);
+}
+
+/* Base styles */
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('../assets/Poppins-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poppins Bold';
+	src: url('../assets/Poppins-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+body {
+	background-color: var(--background);
+	color: var(--textdark);
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+nav li {
+	list-style-type: none;
+	margin: 0;
+}
+
+nav ul {
+	padding-inline-start: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+main {
+	background: #fff;
+	flex: auto;
+}

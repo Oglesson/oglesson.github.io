@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Placeholder screenshot of the Chore Tracker mobile app">
+	<rect width="1200" height="900" fill="#e1d8fd" />
+	<!-- phone frame -->
+	<rect x="410" y="60" width="380" height="780" rx="48" fill="#3c027d" />
+	<rect x="435" y="95" width="330" height="710" rx="24" fill="#ffffff" />
+	<!-- app header -->
+	<rect x="435" y="95" width="330" height="120" rx="24" fill="#a63060" />
+	<rect x="470" y="135" width="180" height="20" rx="10" fill="#ffffff" />
+	<rect x="470" y="168" width="120" height="14" rx="7" fill="#ffffff" opacity="0.7" />
+	<!-- points badge -->
+	<circle cx="710" cy="150" r="26" fill="#ffffff" />
+	<path d="M710 132l7 14 15 2-11 11 3 15-14-8-14 8 3-15-11-11 15-2z" fill="#a63060" />
+	<!-- checklist rows -->
+	<g>
+		<rect x="470" y="260" width="260" height="60" rx="12" fill="#e1d8fd" />
+		<circle cx="500" cy="290" r="14" fill="#3c027d" />
+		<rect x="530" y="282" width="160" height="16" rx="8" fill="#8d7cbf" />
+	</g>
+	<g>
+		<rect x="470" y="340" width="260" height="60" rx="12" fill="#e1d8fd" />
+		<circle cx="500" cy="370" r="14" fill="#8d7cbf" />
+		<rect x="530" y="362" width="130" height="16" rx="8" fill="#8d7cbf" />
+	</g>
+	<g>
+		<rect x="470" y="420" width="260" height="60" rx="12" fill="#e1d8fd" />
+		<circle cx="500" cy="450" r="14" fill="#3c027d" />
+		<rect x="530" y="442" width="170" height="16" rx="8" fill="#8d7cbf" />
+	</g>
+	<g>
+		<rect x="470" y="500" width="260" height="60" rx="12" fill="#e1d8fd" />
+		<circle cx="500" cy="530" r="14" fill="#8d7cbf" />
+		<rect x="530" y="522" width="110" height="16" rx="8" fill="#8d7cbf" />
+	</g>
+	<!-- add button -->
+	<circle cx="700" cy="740" r="34" fill="#a63060" />
+	<rect x="684" y="736" width="32" height="8" rx="4" fill="#ffffff" />
+	<rect x="696" y="724" width="8" height="32" rx="4" fill="#ffffff" />
+</svg>
