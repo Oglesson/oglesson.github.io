@@ -55,6 +55,10 @@
 		color: #fff;
 	}
 
+	.footer-col {
+		margin-bottom: 2rem;
+	}
+
 	.footer-links {
 		list-style: none;
 		margin: 0 0 0.5rem 0;
@@ -92,6 +96,10 @@
 
 		.project-col {
 			grid-column: 2;
+		}
+
+		.footer-col {
+			margin-bottom: 0;
 		}
 
 		.footer-links {

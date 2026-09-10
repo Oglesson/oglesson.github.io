@@ -11,7 +11,7 @@
 			<ul>
 				<li>
 					<a
-						href="{resolve('/')}#aboutme"
+						href={resolve('/about')}
 						onclick={() => {
 							if (window.innerWidth < 600) open = !open;
 						}}>About</a

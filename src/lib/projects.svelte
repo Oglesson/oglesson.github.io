@@ -1,5 +1,6 @@
 <script>
 	import { resolve } from '$app/paths';
+	import Skillschip from '$lib/skillschip.svelte';
 	import chronologyImg from '$lib/assets/projects/chronology.svg';
 	import choreTrackerImg from '$lib/assets/projects/chore-tracker.svg';
 
@@ -8,13 +9,15 @@
 			href: resolve('/chronology'),
 			title: 'Chronology',
 			blurb: 'App to improve efficiency during manufacturing processes. This is a sample/duplicate of the full professional project I worked on.',
-			image: chronologyImg
+			image: chronologyImg,
+			tech: ['React', 'TypeScript', 'Tailwind']
 		},
 		{
 			href: resolve('/chore-tracker'),
 			title: 'Chore Tracker',
 			blurb: 'Mobile app to track chores and reward points for kids, built with React Native.',
-			image: choreTrackerImg
+			image: choreTrackerImg,
+			tech: ['React Native', 'TypeScript', 'Firebase']
 		}
 	];
 </script>
@@ -33,6 +36,11 @@
 					<div class="project-card" style:--card-image={`url("${project.image}")`}>
 						<h3>{project.title}</h3>
 						<p>{project.blurb}</p>
+						<ul class="card-tech">
+							{#each project.tech as tech (tech)}
+								<li><Skillschip skillTitle={tech} /></li>
+							{/each}
+						</ul>
 					</div>
 				</a>
 			{/each}
@@ -56,6 +64,16 @@
 	.project-card h3 {
 		font-size: 1em;
 		margin-bottom: 1.33em;
+	}
+
+	/* mirrors .tech-list on the project detail pages */
+	.card-tech {
+		list-style: none;
+		padding: 0;
+		margin: 0.75rem 0 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
 	}
 
 	.project-grid a {

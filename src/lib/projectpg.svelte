@@ -63,6 +63,10 @@
 		margin-bottom: 0.83em;
 	}
 
+	.tech-section {
+		margin-top: 2rem;
+	}
+
 	/* "Relevant Technologies Used" was an h3; restore its size/margin now that it's an h2 */
 	.tech-section > h2 {
 		font-size: 1.17em;
