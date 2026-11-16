@@ -50,29 +50,39 @@
 					weaknesses in projects before they become an issue. I would now like to pursue
 					this as a focus and not just as something to understand as part of development.
 				</p>
-				<!--<p>
+				<p>
 					For my last role, restricted in team size and lacking some expertise on project
 					and task managment, I stepped in to assist alongside my normal code building
 					responsibilities
 				</p>
 
-				Working at scale Six years at Virgin Media took me across three product teams, each
-				with its own stakeholders, stack and rhythm: a customer self-service platform, a B2B
-				wholesale tool, and the main ecommerce site. That stretch also taught me how to hold
-				delivery together under real pressure, including a six-week GDPR compliance release
-				across multiple products with overnight testing and no room for slippage. Where I'd
-				like to go next Earlier in my career, a year at Squiz working with public sector
-				clients (Land Registry, the Bodleian Libraries, the University of Hertfordshire)
-				gave me a taste of consultancy-style delivery: requirements workshops, functional
-				specifications, and acting as the technical-to-business bridge. That variety and
-				structure is what draws me toward Technical Product Management and Delivery Manager
-				roles now. Outside work [Keep or trim depending on tone you want the page to strike]
-				I volunteer at a large-scale live action roleplay event with 800+ participants,
-				handling participant queries, escalations and on-the-ground problem solving, a
-				strange but genuine exercise in stakeholder management under pressure. I've also
-				trained in functional fitness (Olympic lifting and powerlifting) for over twelve
-				years, which shaped how I think about consistency and incremental progress in
-				delivery work too.-->
+				<h2>Working at scale</h2>
+				<p>
+					Six years at Virgin Media took me across three product teams, each with its own
+					stakeholders, stack and rhythm: a customer self-service platform, a B2B
+					wholesale tool, and the main ecommerce site. That stretch also taught me how to
+					hold delivery together under real pressure, including a six-week GDPR compliance
+					release across multiple products with overnight testing and no room for
+					slippage.
+				</p>
+
+				<h2>Where I'd like to go next</h2>
+				<p>
+					Earlier in my career, a year at Squiz working with public sector clients (Land
+					Registry, the Bodleian Libraries, the University of Hertfordshire) gave me a
+					taste of consultancy-style delivery: requirements workshops, functional
+					specifications, and acting as the technical-to-business bridge. That variety and
+					structure is what draws me toward Technical Product Management and Delivery
+					Manager roles now.
+				</p>
+				<h2>Outside work</h2>
+				<p>
+					I volunteer at a large-scale live action roleplay event with 800+ participants,
+					handling participant queries, escalations and on-the-ground problem solving, a
+					strange but genuine exercise in stakeholder management under pressure. I've also
+					trained in functional fitness for over twelve years, which shaped how I think
+					about consistency and incremental progress in delivery work too.
+				</p>
 
 				<div class="about-social">
 					<SocialIcons color="var(--dark)" layout="row" />

@@ -20,4 +20,16 @@ describe('projects.svelte', () => {
 			.element(page.getByRole('link', { name: /Chronology/ }))
 			.toHaveAttribute('href', expect.stringContaining('chronology'));
 	});
+
+	it('renders the Prosecco project card', async () => {
+		render(Projects);
+		await expect.element(page.getByRole('heading', { name: 'Prosecco' })).toBeInTheDocument();
+	});
+
+	it('Prosecco card links to its project page', async () => {
+		render(Projects);
+		await expect
+			.element(page.getByRole('link', { name: /Prosecco/ }))
+			.toHaveAttribute('href', expect.stringContaining('prosecco'));
+	});
 });

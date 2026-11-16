@@ -21,6 +21,7 @@ describe('siteheader.svelte', () => {
 
 	it('renders project submenu items in the DOM', async () => {
 		render(SiteHeader);
+		await expect.element(page.getByRole('link', { name: 'Prosecco' })).toBeInTheDocument();
 		await expect.element(page.getByRole('link', { name: 'Chronology' })).toBeInTheDocument();
 		await expect.element(page.getByRole('link', { name: 'Chore Tracker' })).toBeInTheDocument();
 	});

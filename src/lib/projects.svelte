@@ -2,6 +2,7 @@
 	import { resolve } from '$app/paths';
 	import Skillschip from '$lib/skillschip.svelte';
 	import chronologyImg from '$lib/assets/projects/chronology.svg';
+	import rubyImg from '$lib/assets/projects/ruby.png';
 	import choreTrackerImg from '$lib/assets/projects/chore-tracker.svg';
 
 	const projects = [
@@ -11,6 +12,15 @@
 			blurb: 'App to improve efficiency during manufacturing processes. This is a sample/duplicate of the full professional project I worked on.',
 			image: chronologyImg,
 			tech: ['React', 'TypeScript', 'Tailwind']
+		},
+		{
+			href: resolve('/prosecco-project'),
+			title: 'Prosecco',
+			blurb: 'Professional front-end web build for a budget broadband brand.',
+			image: rubyImg,
+			tech: ['HTML5', 'SASS', 'Gulp'],
+			// logo artwork rather than a screenshot — show it whole instead of cropping
+			fit: 'contain'
 		},
 		{
 			href: resolve('/chore-tracker'),
@@ -33,7 +43,11 @@
 			{#each projects as project (project.href)}
 				<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -- project.href values are produced by resolve() in the projects array above -->
 				<a href={project.href}>
-					<div class="project-card" style:--card-image={`url("${project.image}")`}>
+					<div
+						class="project-card"
+						style:--card-image={`url("${project.image}")`}
+						style:--card-size={project.fit ?? 'cover'}
+					>
 						<h3>{project.title}</h3>
 						<p>{project.blurb}</p>
 						<ul class="card-tech">
@@ -90,7 +104,7 @@
 		/* Project screenshot behind a pale overlay so the text stays readable */
 		background-image:
 			linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), var(--card-image);
-		background-size: auto, cover;
+		background-size: auto, var(--card-size, cover);
 		background-position: center;
 		background-repeat: no-repeat;
 	}
@@ -113,7 +127,7 @@
 
 		.project-grid {
 			display: grid;
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 			gap: 1rem;
 			align-items: stretch;
 		}

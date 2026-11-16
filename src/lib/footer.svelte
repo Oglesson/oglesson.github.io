@@ -22,6 +22,7 @@
 		<div class="footer-col project-col">
 			<h2>Projects</h2>
 			<ul class="footer-links">
+				<li><a href={resolve('/prosecco-project')}>Prosecco</a></li>
 				<li><a href={resolve('/chronology')}>Chronology</a></li>
 				<li><a href={resolve('/chore-tracker')}>Chore Tracker</a></li>
 			</ul>

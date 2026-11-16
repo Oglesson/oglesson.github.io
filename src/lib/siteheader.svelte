@@ -27,7 +27,7 @@
 				</li>
 				<li class="projects-item {projectsOpen ? 'projects-open' : ''}">
 					<a
-						href={resolve('/chronology')}
+						href={resolve('/prosecco-project')}
 						onclick={(e) => {
 							if (window.innerWidth >= 600) {
 								e.preventDefault();
@@ -47,6 +47,15 @@
 						aria-label="Toggle Projects Menu">▾</button
 					>
 					<ul class="projects-submenu">
+						<li>
+							<a
+								href={resolve('/prosecco-project')}
+								onclick={() => {
+									if (window.innerWidth < 600) open = !open;
+									projectsOpen = false;
+								}}>Prosecco</a
+							>
+						</li>
 						<li>
 							<a
 								href={resolve('/chronology')}
